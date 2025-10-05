@@ -27,7 +27,7 @@ export async function POST(req) {
 
     const headers = {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.FIREWORKS_API_KEY}`
+      Authorization: `Bearer fw_3Ze4FBGeo3zikXy9Yf9anWHK`
     };
 
     const response = await axios.post(

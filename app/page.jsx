@@ -49,7 +49,7 @@ export default function DobbyEmail() {
           <img
             src={`https://pbs.twimg.com/profile_images/1859727094789660672/h7RM1LNu_400x400.jpg`}
             alt={" "}
-            className="w-12 h-12 rounded-full shadow-xl border-4 border-white dark:border-gray-600 animate-[pulse_2s_ease-in-out_infinite]"
+            className="w-16 h-16 rounded-full shadow-xl border-4 border-white dark:border-gray-600 animate-[pulse_2s_ease-in-out_infinite]"
           />{" "}
           <h1 className="text-xl md:text-3xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100">
             Dobby Email Generator
