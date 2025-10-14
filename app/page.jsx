@@ -19,9 +19,7 @@ export default function DobbyEmail() {
 
     try {
       const res = await axios.post("/api/generateEmail", form);
-
       const emailClean = (res.data.email || "").trim();
-
       setRawOutput(emailClean);
     } catch (err) {
       setRawOutput("❌ " + (err.response?.data?.error || err.message));
@@ -43,16 +41,16 @@ export default function DobbyEmail() {
   if (!mounted) return null;
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-900 transition-colors">
-      <div className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-6 max-w-2xl w-full flex flex-col gap-4 ">
+    <main className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-100 dark:bg-gray-900 transition-colors">
+      <div className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-6 max-w-2xl w-full flex flex-col gap-4">
         <div className="flex flex-col gap-2 items-center">
           <img
-            src={`https://pbs.twimg.com/profile_images/1859727094789660672/h7RM1LNu_400x400.jpg`}
-            alt={" "}
+            src="https://pbs.twimg.com/profile_images/1859727094789660672/h7RM1LNu_400x400.jpg"
+            alt="logo"
             className="w-16 h-16 rounded-full shadow-xl border-4 border-white dark:border-gray-600 animate-[pulse_2s_ease-in-out_infinite]"
-          />{" "}
+          />
           <h1 className="text-xl md:text-3xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100">
-            Dobby Email Generator
+            Sentient Email Generator
           </h1>
         </div>
 
@@ -110,6 +108,11 @@ export default function DobbyEmail() {
           </>
         )}
       </div>
+
+      {/* Footer */}
+      <footer className="mt-6 text-gray-600 dark:text-gray-400 text-sm text-center">
+        Created by <span className="font-semibold">Maharshi</span>
+      </footer>
     </main>
   );
 }
